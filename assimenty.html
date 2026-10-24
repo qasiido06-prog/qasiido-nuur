@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number = parseInt(prompt("Guess a number "));
+      let attempt = 1;
+      while (number !== 15) {
+        let number = parseInt(prompt("Guess a number "));
+        if (number == 15) {
+          console.log("successful");
+          break;
+        }
+        if (number < 15) {
+          console.log("Too low");
+        } else {
+          console.log("Too High");
+        }
+        attempt++;
+        if (attempt == 5) {
+          break;
+        }
+      }
+      console.log(`The atempt is ${attempt}`);
+    </script>
+  </body>
+</html>
